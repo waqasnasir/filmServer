@@ -17,7 +17,7 @@ class FilmController extends Controller
 			$result=true;
 		 }
 		return response()->json([
-				'status'=>'success',
+				'success'=>true,
 				'result'=>$result,
 				'films' => $films
 			]);

@@ -13,7 +13,7 @@ class Film extends Model
          */
         public function categories()
         {
-            return $this->belongsToMany('App\Category','category_film');
+            return $this->belongsToMany('App\Category')->withPivot('film_id', 'category')->withTimestamps();;
         }
         public function comments()
         {
